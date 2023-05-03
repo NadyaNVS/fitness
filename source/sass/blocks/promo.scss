@@ -1,0 +1,131 @@
+.promo__content {
+  display: grid;
+  gap: 15px 17px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 49px;
+}
+
+.promo__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 396px;
+  padding-top: 88px;
+
+  @include vp-1199 {
+    max-width: 50%;
+    padding-top: 62px;
+    // max-width: 324px;
+  }
+
+    &::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 556px;
+    background-image: url("../img/header-man.jpg");
+    background-repeat: no-repeat;
+    left: 460px;
+    top: -23px;
+
+    @include vp-1199 {
+      width: 324px;
+      height: 390px;
+      background-size: cover;
+      top: 2%;
+      left: 110%;
+    }
+  }
+}
+
+// .promo {
+//   position: relative;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     width: 500px;
+//     height: 556px;
+//     background-image: url("../img/header-man.jpg");
+//     background-repeat: no-repeat;
+//     left: 563px;
+//     top: -23px;
+
+//     @include vp-1199 {
+//       width: 324px;
+//       height: 390px;
+//       background-size: cover;
+//       left: 399px;
+//       top: 23px;
+//     }
+//   }
+// }
+
+.promo h1 {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-alumni-sans;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-weight: 600;
+  font-size: 92px;
+  line-height: 110px;
+  letter-spacing: 0.05em;
+  text-align: right;
+  text-transform: uppercase;
+  -webkit-text-stroke: 4px;
+
+  @include vp-1199 {
+    font-size: 72px;
+line-height: 86px;
+text-transform: none;
+  }
+}
+
+.promo span {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-alumni-sans;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: right;
+  margin-right: 51px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 41px;
+    margin-right: 0;
+  }
+}
+
+.promo__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  text-align: right;
+  align-self: flex-end;
+  padding-bottom: 36px;
+}
+
+.promo__list li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.promo__button {
+  align-self: flex-end;
+  padding: 19px 55px;
+
+  @include vp-1199 {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+}
+
