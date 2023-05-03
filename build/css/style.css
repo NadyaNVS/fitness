@@ -622,10 +622,14 @@ button,
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+    border-color: #102654;
+    outline: none;
   }
 }
 .btn.focus-visible:focus {
   opacity: 0.8;
+  border-color: #102654;
+  outline: none;
 }
 
 .header {
@@ -636,7 +640,16 @@ button,
 }
 @media (max-width: 1199px) {
   .header {
+    background: conic-gradient(from 155.49deg at 20.7% 35.74%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
     padding-top: 40px;
+    padding-bottom: 105px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    background: conic-gradient(from 167.26deg at 35.31% 34.22%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+    padding-top: 15px;
+    padding-bottom: 78px;
   }
 }
 
@@ -679,6 +692,16 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (max-width: 1199px) {
+  .header__tel-wrapper {
+    margin-top: -6px;
+  }
+}
+@media (max-width: 767px) {
+  .header__tel-wrapper {
+    margin-top: 0;
+  }
+}
 
 .header__navigation a {
   font-family: "Alumni Sans", "Arial", sans-serif;
@@ -689,9 +712,18 @@ button,
   font-weight: 600;
   letter-spacing: 0.03em;
 }
+@media (hover: hover) {
+  .header__navigation a:hover:not(.focus-visible) {
+    opacity: 0.8;
+    color: #102654;
+  }
+}
+.header__navigation a.focus-visible:focus {
+  opacity: 0.8;
+  color: #102654;
+}
 @media (max-width: 1199px) {
   .header__navigation a {
-    font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.02em;
@@ -713,6 +745,20 @@ button,
   grid-template-columns: 1fr 1fr;
   margin-bottom: 49px;
 }
+@media (max-width: 1199px) {
+  .promo__content {
+    gap: 8px 25px;
+    margin-bottom: 37px;
+  }
+}
+@media (max-width: 767px) {
+  .promo__content {
+    gap: 15px 0;
+    margin-bottom: 23px;
+    -ms-grid-columns: minmax(100px, 200px) 1fr;
+    grid-template-columns: minmax(100px, 200px) 1fr;
+  }
+}
 
 .promo__wrapper {
   position: relative;
@@ -729,7 +775,15 @@ button,
 @media (max-width: 1199px) {
   .promo__wrapper {
     max-width: 50%;
-    padding-top: 62px;
+    padding-top: 68px;
+    margin-left: -15px;
+  }
+}
+@media (max-width: 767px) {
+  .promo__wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
   }
 }
 .promo__wrapper::before {
@@ -739,16 +793,32 @@ button,
   height: 556px;
   background-image: url("../img/header-man.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   left: 460px;
   top: -23px;
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .promo__wrapper::before {
+    background-image: url("../img/header-man@2x.jpg");
+  }
 }
 @media (max-width: 1199px) {
   .promo__wrapper::before {
     width: 324px;
     height: 390px;
-    background-size: cover;
-    top: 2%;
-    left: 110%;
+    background-image: url("../img/header-man-tablet.jpg");
+    top: 19px;
+    left: 109%;
+  }
+}
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+  .promo__wrapper::before {
+    background-image: url("../img/header-man-tablet@2x.jpg");
+  }
+}
+@media (max-width: 767px) {
+  .promo__wrapper::before {
+    display: none;
   }
 }
 
@@ -777,6 +847,12 @@ button,
     text-transform: none;
   }
 }
+@media (max-width: 767px) {
+  .promo h1 {
+    max-width: 300px;
+    margin-left: auto;
+  }
+}
 
 .promo span {
   margin: 0;
@@ -799,7 +875,13 @@ button,
   .promo span {
     font-size: 34px;
     line-height: 41px;
-    margin-right: 0;
+    margin-right: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .promo span {
+    font-size: 28px;
+    line-height: 34px;
   }
 }
 
@@ -817,6 +899,18 @@ button,
   align-self: flex-end;
   padding-bottom: 36px;
 }
+@media (max-width: 1199px) {
+  .promo__list {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .promo__list {
+    margin-right: auto;
+    width: 113px;
+    padding-bottom: 32px;
+  }
+}
 
 .promo__list li {
   font-weight: 400;
@@ -831,8 +925,15 @@ button,
 }
 @media (max-width: 1199px) {
   .promo__button {
-    padding-left: 33px;
-    padding-right: 33px;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+}
+@media (max-width: 767px) {
+  .promo__button {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
