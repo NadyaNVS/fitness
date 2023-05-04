@@ -1,0 +1,29 @@
+.packeges {
+  position: relative;
+  background-color: $color-ghost-white;
+
+  &::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/weights.png");
+  background-repeat: no-repeat;
+  width: 321px;
+  height: 384px;
+  right: -34px;
+  bottom: -34px;
+  }
+}
+
+.packeges h2 {
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.packeges__container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}

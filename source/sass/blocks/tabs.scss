@@ -1,0 +1,128 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding-top: 2px;
+}
+
+.tabs__controls {
+  position: relative;
+  display: flex;
+  gap: 46px;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 40px;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: rgba($color-grey, 0.2);
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+
+.tabs__control {
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: none;
+  letter-spacing: unset;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  opacity: 0.5;
+  min-width: auto;
+  border: none;
+  background-color: transparent;
+  justify-content: center;
+  color: $color-sapphire;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  @include hover-focus {
+    opacity: 1;
+    color: $color-crimson;
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 10px;
+    padding: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 10px 2% 0;
+    padding: 10px;
+    width: 45%;
+  }
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+
+  .tabs__control.is-active::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: $color-crimson;
+
+    }
+
+.tabs__content {
+  margin-bottom: 40px;
+
+  transition: height 0.3s;
+}
+
+.tabs__element {
+  padding: 25px;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+  }
+
+  p {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &:nth-child(1) {
+    background-color: rgb(250, 235, 215);
+  }
+
+  &:nth-child(2) {
+    background-color: rgb(229, 250, 215);
+  }
+
+  &:nth-child(3) {
+    background-color: rgb(180, 188, 233);
+  }
+
+  &:nth-child(4) {
+    background-color: rgb(255, 187, 204);
+  }
+}
+
+.tabs--unset .tabs__content {
+  height: 100px;
+}
+
+.tabs--unset .tabs__element {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
