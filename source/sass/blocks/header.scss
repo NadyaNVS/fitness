@@ -26,8 +26,8 @@
 
 .header__logo {
   @include vp-1199 {
-  width: 82px;
-  height: 17px;
+    width: 82px;
+    height: 17px;
   }
 
   @include vp-767 {
