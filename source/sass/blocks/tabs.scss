@@ -30,7 +30,7 @@
 .tabs__control {
   padding: 0;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
   text-transform: none;
   letter-spacing: unset;
   position: relative;
@@ -68,52 +68,31 @@
   }
 }
 
-  .tabs__control.is-active::before {
-    position: absolute;
-    bottom: 0;
-    content: "";
-    width: 100%;
-    height: 2px;
-    background: $color-crimson;
+.tabs__control.is-active::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: $color-crimson;
 
-    }
+}
 
 .tabs__content {
-  margin-bottom: 40px;
-
   transition: height 0.3s;
 }
 
 .tabs__element {
-  padding: 25px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   width: 100%;
 
   @media screen and (max-width: 767px) {
     padding: 15px;
-  }
-
-  p {
-    margin: 0;
-
-    &:not(:last-child) {
-      margin: 0 0 20px 0;
-    }
-  }
-
-  &:nth-child(1) {
-    background-color: rgb(250, 235, 215);
-  }
-
-  &:nth-child(2) {
-    background-color: rgb(229, 250, 215);
-  }
-
-  &:nth-child(3) {
-    background-color: rgb(180, 188, 233);
-  }
-
-  &:nth-child(4) {
-    background-color: rgb(255, 187, 204);
   }
 }
 
@@ -125,4 +104,72 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.tabs__item {
+  background-color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 54px 70px 61px;
+  border: 7px solid transparent;
+
+  &:hover {
+    border-image-slice: 1;
+    border-image-source: $border-effect;
+  }
+}
+
+.tabs__item h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+.tabs__item p {
+  margin: 0;
+  margin-bottom: 66px;
+}
+
+.tabs__price {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 0;
+  margin-bottom: 32px;
+}
+
+.tabs__item span {
+  position: relative;
+  color: $color-egyptian-blue;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+
+  &::after {
+    position: absolute;
+    content: attr(data-price);
+    color: $color-whisper;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    left: -15%;
+    bottom: -7%;
+    opacity: 0.48;
+  }
+}
+
+.tabs__button {
+  color: $color-sapphire;
+  border: 2px solid $color-sapphire;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
 }
