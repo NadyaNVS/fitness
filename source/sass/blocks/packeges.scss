@@ -7,10 +7,26 @@
     position: absolute;
     background-image: url("../../img/weights.png");
     background-repeat: no-repeat;
-    width: 321px;
-    height: 384px;
+    background-size: cover;
+    width: 320px;
+    height: 493px;
     right: -34px;
-    bottom: -58px;
+    bottom: -151px;
+
+    @include retina {
+      background-image: url("../img/weights@2x.png");
+    }
+
+    @include vp-1199 {
+      width: 416px;
+      height: 410px;
+      right: -72px;
+      bottom: -94px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 
@@ -23,9 +39,32 @@
   letter-spacing: 0.03em;
   text-align: center;
   margin-left: -3px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-left: -13px;
+    margin-bottom: 3px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
 }
 
 .packeges__container {
   padding-top: 120px;
-  padding-bottom: 100px;
+  padding-bottom: 117px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    padding-bottom: 70px;
+  }
 }

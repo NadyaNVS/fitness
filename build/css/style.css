@@ -516,8 +516,8 @@ button,
 .rouble {
   font-family: "Rouble", "Arial", sans-serif;
   /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
+  text-transform: lowercase;
+  font-weight: 400;
   /* stylelint-enable */
 }
 
@@ -554,9 +554,9 @@ button,
 
 .no-transition {
   /* stylelint-disable-next-line */
-  -webkit-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -1081,6 +1081,8 @@ button,
   .about__picture img {
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 89%;
+       object-position: 89%;
     aspect-ratio: 320/313;
   }
 }
@@ -1097,6 +1099,7 @@ button,
 }
 @media (max-width: 1199px) {
   .about__video {
+    aspect-ratio: 266/167;
     min-height: 167px;
     width: 39%;
     -webkit-transform: translate(78%, -50%);
@@ -1188,10 +1191,29 @@ button,
   position: absolute;
   background-image: url("../../img/weights.png");
   background-repeat: no-repeat;
-  width: 321px;
-  height: 384px;
+  background-size: cover;
+  width: 320px;
+  height: 493px;
   right: -34px;
-  bottom: -58px;
+  bottom: -151px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .packeges::before {
+    background-image: url("../img/weights@2x.png");
+  }
+}
+@media (max-width: 1199px) {
+  .packeges::before {
+    width: 416px;
+    height: 410px;
+    right: -72px;
+    bottom: -94px;
+  }
+}
+@media (max-width: 767px) {
+  .packeges::before {
+    display: none;
+  }
 }
 
 .packeges h2 {
@@ -1204,10 +1226,37 @@ button,
   text-align: center;
   margin-left: -3px;
 }
+@media (max-width: 1199px) {
+  .packeges h2 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-left: -13px;
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .packeges h2 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
+}
 
 .packeges__container {
   padding-top: 120px;
-  padding-bottom: 100px;
+  padding-bottom: 117px;
+}
+@media (max-width: 1199px) {
+  .packeges__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .packeges__container {
+    padding-top: 63px;
+    padding-bottom: 70px;
+  }
 }
 
 .tabs {
@@ -1234,6 +1283,18 @@ button,
   margin: auto;
   margin-bottom: 40px;
 }
+@media (max-width: 1199px) {
+  .tabs__controls {
+    margin-bottom: 45px;
+    gap: 54px;
+  }
+}
+@media (max-width: 767px) {
+  .tabs__controls {
+    margin-bottom: 34px;
+    gap: 45px;
+  }
+}
 .tabs__controls::before {
   position: absolute;
   bottom: 0;
@@ -1241,12 +1302,6 @@ button,
   width: 100%;
   height: 2px;
   background: rgba(120, 120, 120, 0.2);
-}
-@media screen and (max-width: 767px) {
-  .tabs__controls {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 
 .tabs__control {
@@ -1270,6 +1325,18 @@ button,
   font-size: 20px;
   line-height: 30px;
 }
+@media (max-width: 1199px) {
+  .tabs__control {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .tabs__control {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 @media (hover: hover) {
   .tabs__control:hover:not(.focus-visible) {
     opacity: 1;
@@ -1279,19 +1346,6 @@ button,
 .tabs__control.focus-visible:focus {
   opacity: 1;
   color: #d10a42;
-}
-@media screen and (max-width: 1023px) {
-  .tabs__control {
-    margin: 0 10px;
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .tabs__control {
-    margin: 10px 2% 0;
-    padding: 10px;
-    width: 45%;
-  }
 }
 .tabs__control.is-active {
   opacity: 1;
@@ -1321,12 +1375,22 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   gap: 40px;
   width: 100%;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 1199px) {
   .tabs__element {
-    padding: 15px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding-left: 118px;
+    padding-right: 118px;
+  }
+}
+@media (max-width: 767px) {
+  .tabs__element {
+    padding: 0;
+    gap: 35px;
   }
 }
 
@@ -1352,12 +1416,35 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 54px 70px 61px;
   border: 7px solid transparent;
 }
-.tabs__item:hover {
+@media (max-width: 1199px) {
+  .tabs__item {
+    padding-left: 111px;
+    padding-right: 111px;
+  }
+}
+@media (max-width: 767px) {
+  .tabs__item {
+    padding: 44px 35px 46px;
+  }
+}
+.tabs__item:hover, .tabs__item:focus-within, .tabs__item:active {
+  border: 7px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+}
+.tabs__item:hover .tabs__button, .tabs__item:focus-within .tabs__button, .tabs__item:active .tabs__button {
+  color: #ffffff;
+  background: -o-linear-gradient(352.95deg, #ED0233 17.6%, #003EB7 95.31%);
+  background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
 }
 
 .tabs__item h3 {
@@ -1368,22 +1455,47 @@ button,
   font-size: 26px;
   line-height: 29px;
 }
+@media (max-width: 767px) {
+  .tabs__item h3 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
 
 .tabs__item p {
   margin: 0;
   margin-bottom: 66px;
+}
+@media (max-width: 767px) {
+  .tabs__item p {
+    margin-bottom: 53px;
+  }
 }
 
 .tabs__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 14px;
   z-index: 0;
   margin-bottom: 32px;
+}
+@media (max-width: 767px) {
+  .tabs__price {
+    margin-bottom: 29px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabs__price svg {
+    width: 24px;
+    height: 33px;
+  }
 }
 
 .tabs__item span {
@@ -1392,6 +1504,12 @@ button,
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
+}
+@media (max-width: 767px) {
+  .tabs__item span {
+    font-size: 48px;
+    line-height: 72px;
+  }
 }
 .tabs__item span::after {
   position: absolute;
@@ -1413,6 +1531,12 @@ button,
   left: -15%;
   bottom: -7%;
   opacity: 0.48;
+}
+@media (max-width: 767px) {
+  .tabs__item span::after {
+    font-size: 80px;
+    line-height: 120px;
+  }
 }
 
 .tabs__button {

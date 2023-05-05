@@ -21,8 +21,8 @@
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
+  text-transform: lowercase;
+  font-weight: 400;
   /* stylelint-enable */
 }
 
@@ -64,7 +64,7 @@
 
 .no-transition {
   /* stylelint-disable-next-line */
-  transition: none !important;
+  transition: none;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
