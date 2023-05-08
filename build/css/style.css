@@ -316,13 +316,6 @@ template {
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
-  font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
-}
-@font-face {
-  font-style: normal;
   font-weight: 300;
   font-family: "roboto-condensed";
   font-display: swap;
@@ -1552,8 +1545,20 @@ button,
   padding-top: 120px;
   padding-bottom: 50px;
 }
+@media (max-width: 1199px) {
+  .games__container {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .games__container {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+}
 
 .games__content {
+  position: relative;
   color: #ffffff;
   background-color: #ed0233;
   display: -webkit-box;
@@ -1564,7 +1569,51 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 85px 79px;
-  max-width: 500px;
+}
+@media (max-width: 1199px) {
+  .games__content {
+    padding: 51px 45px 50px;
+  }
+}
+.games__content::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/games-man.jpg");
+  background-color: #030744;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  width: 57%;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .games__content::before {
+    background-image: url("../img/games-man@2x.jpg");
+  }
+}
+@media (max-width: 767px) {
+  .games__content::before {
+    width: 100%;
+    top: 100%;
+  }
+}
+
+.games__content-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 34%;
+}
+@media (max-width: 767px) {
+  .games__content-inner {
+    width: 100%;
+  }
 }
 
 .games__content h2 {
@@ -1576,8 +1625,15 @@ button,
   line-height: 79px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  width: 77%;
+  width: 58%;
   margin-left: 12px;
+}
+@media (max-width: 1199px) {
+  .games__content h2 {
+    font-size: 48px;
+    line-height: 46px;
+    margin-left: 7px;
+  }
 }
 
 .games__content p {
@@ -1585,13 +1641,23 @@ button,
   font-size: 18px;
   line-height: 27px;
   margin-top: 8px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
+}
+@media (max-width: 1199px) {
+  .games__content p {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .games__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1607,8 +1673,13 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 30%;
+  width: 27%;
   gap: 8px;
+}
+@media (max-width: 1199px) {
+  .games__timetable {
+    gap: 0;
+  }
 }
 
 .games__timetable dd {
@@ -1618,6 +1689,11 @@ button,
   width: -moz-fit-content;
   width: fit-content;
 }
+@media (max-width: 1199px) {
+  .games__timetable dd {
+    margin-top: -1px;
+  }
+}
 .games__timetable dd::before {
   content: "";
   position: absolute;
@@ -1626,16 +1702,33 @@ button,
   height: 1px;
   background-color: #ffffff;
 }
+@media (max-width: 1199px) {
+  .games__timetable dd::before {
+    top: 2px;
+  }
+}
 
 .games__timetable dt {
   font-size: 18px;
   line-height: 27px;
+}
+@media (max-width: 1199px) {
+  .games__timetable dt {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .games__timetable span {
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
+}
+@media (max-width: 1199px) {
+  .games__timetable span {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .games__date dd {
@@ -1644,17 +1737,38 @@ button,
   display: flex;
   gap: 7px;
 }
+@media (max-width: 1199px) {
+  .games__date dd {
+    gap: 4px;
+  }
+}
 
 .games__date small {
   font-size: 14px;
   line-height: 21px;
   margin-top: 10px;
 }
+@media (max-width: 1199px) {
+  .games__date small {
+    font-size: 10px;
+    line-height: 13px;
+    margin-top: 4px;
+  }
+}
 
 .games__button {
   margin-top: 20px;
   padding-top: 26px;
   padding-bottom: 23px;
+}
+@media (max-width: 1199px) {
+  .games__button {
+    font-size: 10px;
+    line-height: 12px;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    border-width: 2px;
+  }
 }
 
 [data-tabs=parent] {

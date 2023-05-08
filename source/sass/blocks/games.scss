@@ -1,15 +1,64 @@
 .games__container {
   padding-top: 120px;
   padding-bottom: 50px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
 }
 
 .games__content {
+  position: relative;
   color: $color-default-white;
   background-color: $color-torch-red;
   display: flex;
   flex-direction: column;
   padding: 85px 79px;
-  max-width: 500px;
+
+  @include vp-1199 {
+    padding: 51px 45px 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/games-man.jpg");
+    background-color: $color-midnight-express;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    width: 57%;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+
+    @include retina {
+      background-image: url("../img/games-man@2x.jpg");
+    }
+
+
+    @include vp-767 {
+      width: 100%;
+      top: 100%;
+    }
+
+  }
+}
+
+.games__content-inner {
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .games__content h2 {
@@ -21,8 +70,14 @@
   line-height: 79px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  width: 77%;
+  width: 58%;
   margin-left: 12px;
+
+  @include vp-1199 {
+    font-size: 48px;
+    line-height: 46px;
+    margin-left: 7px;
+  }
 }
 
 .games__content p {
@@ -30,11 +85,19 @@
   font-size: 18px;
   line-height: 27px;
   margin-top: 8px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .games__info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -43,8 +106,12 @@
   margin-top: -4px;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 27%;
   gap: 8px;
+
+  @include vp-1199 {
+    gap: 0;
+  }
 }
 
 .games__timetable dd {
@@ -52,40 +119,76 @@
   position: relative;
   width: fit-content;
 
+  @include vp-1199 {
+    margin-top: -1px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     top: 5px;
     width: 100%;
     height: 1px;
-    background-color: $color-default-white;;
+    background-color: $color-default-white;
+
+    @include vp-1199 {
+      top: 2px;
+    }
   }
 }
 
 .games__timetable dt {
   font-size: 18px;
   line-height: 27px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .games__timetable span {
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .games__date dd {
   display: flex;
   gap: 7px;
+
+  @include vp-1199 {
+    gap: 4px;
+  }
 }
 
 .games__date small {
   font-size: 14px;
   line-height: 21px;
   margin-top: 10px;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 13px;
+    margin-top: 4px;
+  }
 }
 
 .games__button {
   margin-top: 20px;
   padding-top: 26px;
   padding-bottom: 23px;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 12px;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    border-width: 2px;
+  }
 }
