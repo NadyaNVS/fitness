@@ -377,6 +377,7 @@ html {
   line-height: 24px;
   font-family: "roboto-condensed", "Arial", sans-serif;
   color: #102654;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -613,7 +614,7 @@ button,
           user-select: none;
 }
 .btn--red {
-  background-color: #ff1553;
+  background-color: #ed0233;
 }
 .btn:disabled {
   opacity: 0.5;
@@ -1545,6 +1546,115 @@ button,
   padding-top: 25px;
   padding-bottom: 25px;
   width: 100%;
+}
+
+.games__container {
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.games__content {
+  color: #ffffff;
+  background-color: #ed0233;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 85px 79px;
+  max-width: 500px;
+}
+
+.games__content h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 79px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  width: 77%;
+  margin-left: 12px;
+}
+
+.games__content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+.games__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.games__timetable {
+  margin: 0;
+  margin-top: -4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  gap: 8px;
+}
+
+.games__timetable dd {
+  margin: 0;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.games__timetable dd::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.games__timetable dt {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.games__timetable span {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.games__date dd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+}
+
+.games__date small {
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 10px;
+}
+
+.games__button {
+  margin-top: 20px;
+  padding-top: 26px;
+  padding-bottom: 23px;
 }
 
 [data-tabs=parent] {
