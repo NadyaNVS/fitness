@@ -1,4 +1,5 @@
-import Swiper from '../../../node_modules/swiper/swiper-bundle';
+// import Swiper from '../../../node_modules/swiper/swiper-bundle';
+import Swiper from 'swiper/swiper-bundle';
 const trainersSwiper = document.querySelector('.trainers__swiper');
 
 

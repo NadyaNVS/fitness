@@ -19,13 +19,14 @@
 }
 
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #afafaf;
+  --swiper-inerection-color: #d10a42;
 }
 
 .swiper {
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  // position: relative;
   overflow: hidden;
   list-style: none;
   padding: 0;
@@ -208,7 +209,7 @@
 }
 
 :root {
-  --swiper-navigation-size: 44px;
+  --swiper-navigation-size: 32px;
   /*
   --swiper-navigation-color: var(--swiper-theme-color);
   */
@@ -217,16 +218,30 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
+  border: none;
+  background-color: transparent;
   top: 50%;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  width: calc(var(--swiper-navigation-size) / 43 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  // margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+  &:hover {
+    color: var(--swiper-inerection-color);
+  }
+
+  &:focus-visible {
+    color: var(--swiper-inerection-color);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .swiper-button-prev.swiper-button-disabled,
@@ -249,7 +264,7 @@
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 10px;
+  left: -20px;
   right: auto;
 }
 
@@ -260,7 +275,7 @@
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 10px;
+  right: -19px;
   left: auto;
 }
 
