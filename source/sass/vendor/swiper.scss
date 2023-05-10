@@ -264,8 +264,21 @@
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: -20px;
+  left: 43px;
   right: auto;
+
+  // @media (max-width: 1199px) {
+  //   left: 45px;
+  // }
+
+  @media (max-width: 767px) {
+    left: 14px;
+  }
+
+
+  // @include vp-1199 {
+  //   left: 45px;
+  // }
 }
 
 .swiper-button-prev:after,
@@ -275,8 +288,20 @@
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: -19px;
+  right: 43px;
   left: auto;
+
+  // @media (max-width: 1199px) {
+  //   right: 41px;
+  // }
+
+  @media (max-width: 767px) {
+    right: 12px;
+  }
+
+  // @include vp-1199 {
+  //   right: 41px;
+  // }
 }
 
 .swiper-button-next:after,

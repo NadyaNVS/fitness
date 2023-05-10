@@ -1,7 +1,18 @@
 .trainers .container {
   position: relative;
-  // max-width: 1366px;
-  // padding: 0 103px;
+  max-width: 1366px;
+  padding-left: 103px;
+  padding-right: 103px;
+
+  @include vp-1199 {
+    padding-left: 101px;
+    padding-right: 101px;
+  }
+
+  @include vp-767 {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
 }
 
 .trainers__container {
@@ -9,11 +20,12 @@
   padding-bottom: 140px;
 
   @include vp-1199 {
-    padding: 50px 56px 140px;
+    padding-top: 50px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding: 34px 32px 140px;
+    padding-top: 34px;
   }
 }
 
