@@ -10,16 +10,10 @@
 }
 
 .advantages__container {
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 97px;
-  padding-bottom: 140px;
+  padding: 97px 60px 133px;
 
   @include vp-1199 {
-    padding-top: 91px;
-    padding-bottom: 95px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 91px 0 95px;
   }
 
   @include vp-767 {
