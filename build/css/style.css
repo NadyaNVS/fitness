@@ -2861,6 +2861,12 @@ button,
 .advantages {
   background-color: #f8f9fc;
 }
+@media (max-width: 767px) {
+  .advantages .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 .advantages__container {
   padding-left: 60px;
@@ -2874,6 +2880,11 @@ button,
     padding-bottom: 95px;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__container {
+    padding-top: 33px;
   }
 }
 
@@ -2924,14 +2935,19 @@ button,
     grid-auto-rows: unset;
   }
 }
+@media (max-width: 767px) {
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 41px;
+  }
+}
 
 .advantages__item {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
+  grid-column: -2/-1;
   -ms-grid-columns: auto 1fr;
   grid-template-columns: auto 1fr;
   gap: 30px;
@@ -2947,11 +2963,23 @@ button,
     padding-left: 0;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
+  .advantages__item:nth-child(2n) {
+    padding: 0 46px;
+  }
+}
+@media (max-width: 767px) {
   .advantages__item {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 7px;
+    text-align: center;
+    padding: 0 46px;
   }
 }
 
@@ -2979,6 +3007,11 @@ button,
   .advantages__item span {
     font-size: 58px;
     line-height: 53px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item span {
+    margin: 0 auto;
   }
 }
 
@@ -3039,11 +3072,25 @@ button,
   }
   .advantages__item--center span {
     line-height: 60px;
+    margin: 0 auto;
   }
   .advantages__item--center small {
     font-size: 22px;
     line-height: 33px;
     padding-top: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item--center {
+    width: 100%;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    padding: 47px 55px 45px;
+    gap: 9px;
+  }
+  .advantages__item--center small {
+    padding-top: 2px;
   }
 }
 
