@@ -3420,10 +3420,14 @@ button,
 .reviews__swiper {
   position: relative;
   margin: 0 auto;
-  width: 560px;
-  padding-right: 50px;
-  padding-left: 50px;
+  width: 764px;
   overflow: hidden;
+}
+.reviews__swiper .swiper-button-prev,
+.reviews__swiper .swiper-button-next {
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .reviews__list {
@@ -3437,7 +3441,7 @@ button,
   cursor: grab;
 }
 
-.reviews__item {
+.reviews__box {
   color: #ffffff;
   background-color: #1c3374;
   display: -ms-grid;
@@ -3450,10 +3454,12 @@ button,
   -webkit-column-gap: 28px;
      -moz-column-gap: 28px;
           column-gap: 28px;
+  width: 560px;
+  margin: 0 auto;
   cursor: -webkit-grab;
   cursor: grab;
 }
-.reviews__item h3 {
+.reviews__box h3 {
   margin: 0;
   margin-top: -2px;
   -ms-grid-row: 1;
@@ -3463,7 +3469,7 @@ button,
   font-size: 20px;
   line-height: 30px;
 }
-.reviews__item p {
+.reviews__box p {
   margin: 0;
   line-height: 22px;
 }
