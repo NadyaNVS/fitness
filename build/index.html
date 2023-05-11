@@ -546,6 +546,51 @@
           </div>
         </div>
       </section>
+      <section class="contacts">
+
+        <div class="contacts__container">
+          <div class="contacts__trial trial">
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <legend>Бесплатное занятие</legend>
+              <fieldset>
+                <div>
+                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <input type="text" name="name" id="name" placeholder="Имя" minlength="1"
+                    pattern="^[a-zA-Zа-яёА-ЯЁ\-\s]+$/g" required>
+                </div>
+                <div>
+                  <label class="visually-hidden" for="tel">Телефон:</label>
+                  <input type="tel" name="phone" id="tel" placeholder="Телефон"
+                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{1,10}$" required>
+                </div>
+                <button class="trial__button btn" type="button">отправить</button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="contacts__info address">
+            <h2>Контакты</h2>
+            <ul class="address__list">
+              <li class="address__item">
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</p>
+              </li>
+              <li class="address__item">
+                <h3>Телефон:</h3>
+                <a href="tel:+78005555555">8-800-555-55-55</a>
+              </li>
+              <li class="address__item">
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</p>
+              </li>
+              <li class="address__item">
+                <h3>Email:</h3>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
     </main>
     <footer>
       <div class="container"></div>
