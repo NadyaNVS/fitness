@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {setUpVideo} from './modules/video';
 import {initTabs} from './modules/tabs/init-tabs';
-import {initTrainersSwiper} from './modules/init-swiper';
+import {initTrainersSwiper, initReviewsSwiper} from './modules/init-swiper';
 
 // ---------------------------------
 
@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     setUpVideo();
     initTrainersSwiper();
+    initReviewsSwiper();
     initModals();
     initTabs();
     const form = new Form();

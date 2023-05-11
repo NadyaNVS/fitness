@@ -1,6 +1,7 @@
 // import Swiper from '../../../node_modules/swiper/swiper-bundle';
 import Swiper from 'swiper/swiper-bundle';
 const trainersSwiper = document.querySelector('.trainers__swiper');
+const reviewsSwiper = document.querySelector('.reviews__swiper');
 
 
 const initTrainersSwiper = () => {
@@ -40,4 +41,23 @@ const initTrainersSwiper = () => {
   }
 };
 
-export {initTrainersSwiper};
+const initReviewsSwiper = () => {
+  if (reviewsSwiper) {
+    (() =>
+      new Swiper('.reviews__swiper', {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 33,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      })
+    )();
+
+  }
+};
+
+export {initTrainersSwiper, initReviewsSwiper};
