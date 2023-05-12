@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 5px;
+    gap: 7px 42%;
   }
 }
 
@@ -33,13 +33,16 @@
   margin-top: 3px;
   // fill: $color-alice-blue;
 
-  // @include vp-1199 {
-  //   width: 38px;
-  //   height: 20px;
-  // }
+  @include vp-1199 {
+    width: 82px;
+    height: 18px;
+  }
 
   @include vp-767 {
+    width: 68px;
+    height: 15px;
     position: absolute;
+    margin-top: 0;
   }
 }
 
@@ -69,6 +72,7 @@
     }
 
     &--offers {
+      margin-top: -3px;
       grid-column: 2/3;
     }
   }
