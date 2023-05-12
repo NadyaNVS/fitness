@@ -5,13 +5,15 @@
   align-self: center;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 6px 11px;
-  margin-top: 3px;
+  row-gap: 6px;
+  margin-top: -6px;
+  // margin-right: -3px;
+  margin-right: 2px;
   min-width: 100px;
 
   @include vp-1199 {
-    // min-width: 91px;
-    // column-gap: 15px;
+    margin-top: -7px;
+    margin-right: -9px;
   }
 
   @include vp-767 {
@@ -23,6 +25,8 @@
 }
 
 .social svg {
+  fill: $color-default-white;
+
   @include vp-1199 {
     width: 25px;
     height: 25px;
@@ -30,7 +34,6 @@
 }
 
 .social a {
-  // fill: $color-alice-blue;
   display: flex;
   border-radius: 4px;
   width: 35px;
@@ -38,12 +41,8 @@
   align-items: center;
   justify-content: center;
 
-  // @include hover-focus {
-  //   opacity: 0.8;
-  //   outline: 1px solid $color-alice-blue;
-  // }
-
-  // &:active {
-  //   fill: $color-lochmara;
-  // }
+  @include hover-focus {
+    opacity: 0.8;
+    outline: 1px solid $color-default-white;
+  }
 }

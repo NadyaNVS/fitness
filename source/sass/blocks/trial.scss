@@ -42,17 +42,33 @@
   }
 
   input {
+    color: $color-default-white;
     padding: 6px 10px 6px 0;
     margin: 0;
     width: 100%;
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
     border-bottom: 1px solid $color-light-slate-grey;
 
     &::placeholder {
       color: $color-default-white;
       font-size: 14px;
       line-height: 16px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      border-bottom-color:$color-cornflower-blue;
+    }
+
+    &:active {
+      background-color: transparent;
+      border-bottom-color:$color-cornflower-blue;
+    }
+
+    &:focus-visible {
+      background-color: transparent;
+      outline: 1px solid $color-light-slate-grey;
     }
   }
 
@@ -63,6 +79,13 @@
     border-width: 3px;
     padding-top: 15px;
     padding-bottom: 16px;
+
+    @include hover-focus {
+      opacity: 0.8;
+      border-image-slice: 1;
+      border-image-source: $border-effect;
+      outline: none;
+    }
 
     @include vp-767 {
       margin-top: 8px;
