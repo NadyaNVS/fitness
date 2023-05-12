@@ -552,21 +552,22 @@
       <section class="contacts">
 
         <div class="contacts__container">
-          <div class="contacts__trial trial">
-            <form action="https://echo.htmlacademy.ru/" method="post">
+          <div class="contacts__trial trial" data-form-validate data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
               <legend>Бесплатное занятие</legend>
               <fieldset>
-                <div>
+                <div data-validate-type="text" data-limitation="name" data-required
+                  data-message-base="Данное поле является обязательным">
                   <label class="visually-hidden" for="name">Ваше имя:</label>
                   <input type="text" name="name" id="name" placeholder="Имя" minlength="1"
                     pattern="^[a-zA-Zа-яёА-ЯЁ\-\s]+$/g" required>
                 </div>
-                <div>
+                <div data-validate-type="phone" data-required data-message-base="Данное поле является обязательным">
                   <label class="visually-hidden" for="tel">Телефон:</label>
                   <input type="tel" name="phone" id="tel" placeholder="Телефон"
                     pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{1,10}$" required>
                 </div>
-                <button class="trial__button btn" type="button">отправить</button>
+                <button class="trial__button btn" type="submit">отправить</button>
               </fieldset>
             </form>
           </div>
