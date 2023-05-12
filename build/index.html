@@ -239,7 +239,7 @@
           </div>
         </div>
       </section>
-      <section class="trainers">
+      <section class="trainers" id="trainers">
         <div class="container trainers__container">
 
           <h2>Тренеры</h2>
@@ -577,7 +577,7 @@
                 <h3>Адрес:</h3>
                 <p>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</p>
               </li>
-              <li class="address__item">
+              <li class="address__item address__item--tel">
                 <h3>Телефон:</h3>
                 <a href="tel:+78005555555">8-800-555-55-55</a>
               </li>
@@ -595,8 +595,62 @@
 
       </section>
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <nav class="footer__navigation navigation">
+            <a class="navigation__logo">
+              <svg width="88" height="32">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+              <span class="visually-hidden">Логотип фитнес центра "SuperGym".</span>
+            </a>
+            <ul class="navigation__list">
+              <li class="navigation__item navigation__item--services">
+                <a href="#">Услуги</a>
+              </li>
+              <li class="navigation__item navigation__item--packeges">
+                <a href="#packeges">Абонементы</a>
+              </li>
+              <li class="navigation__item navigation__item--offers">
+                <a href="#offers">Акции</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#trainers">Тренеры</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#">Расписание</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__social social">
+            <li>
+              <a href="#">
+                <svg width="25" height="25">
+                  <use href="img/sprite.svg#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="25" height="25">
+                  <use href="img/sprite.svg#icon-ok"></use>
+                </svg>
+                <span class="visually-hidden">Одноклассники</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="25" height="25">
+                  <use href="img/sprite.svg#icon-reddit"></use>
+                </svg>
+                <span class="visually-hidden">Редит</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </div>
 
