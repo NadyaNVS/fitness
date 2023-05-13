@@ -13,6 +13,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --customSyntax postcss-scss",
     "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
     "build": "gulp build",
+    "stylelint:fix": "stylelint \"source/sass/**/*.scss\" --fix",
     "dev": "gulp dev",
     "start": "gulp start",
     "webp": "gulp webp"

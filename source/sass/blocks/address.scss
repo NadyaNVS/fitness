@@ -83,7 +83,8 @@
     }
   }
 
-  p, a {
+  p,
+  a {
     margin: 0;
     font-size: 14px;
     line-height: 21px;
@@ -96,7 +97,7 @@
 
   &--tel {
     @include vp-767 {
-    grid-row: 3/4;
+      grid-row: 3/4;
     }
   }
 }

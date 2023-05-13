@@ -37,17 +37,12 @@
 }
 
 .footer__navigation {
-
   display: flex;
   gap: 80px;
-  // display: grid;
-  // grid-template-columns: auto 1fr;
-  // gap: 14%;
   align-items: center;
   width: 795px;
-  // justify-content: space-between;
 
-  @include vp-1199{
+  @include vp-1199 {
     gap: 61px;
     width: unset;
   }

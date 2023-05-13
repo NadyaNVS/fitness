@@ -91,13 +91,13 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
+  text-align: center;
 }
 
 .trainers__name {
   position: absolute;
   bottom: 23px;
   width: 100%;
-  text-align: center;
 }
 
 .trainers__description {
@@ -105,7 +105,8 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  padding: 51px 47px 58px 48px;
+  // padding: 51px 47px 58px 48px;
+  padding: 20% 12% 14% 14%;
   color: $color-default-white;
   background-color: $trainers-bg;
   top: 0;
@@ -133,8 +134,15 @@
 .trainers__description ul {
   padding: 0;
   margin: 0;
-  padding-left: 22px;
+  padding-left: 18%;
+  width: 100;
   list-style-type: none;
+  overflow: hidden scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
 
   @include vp-1199 {
     padding-left: 32px;
@@ -149,7 +157,8 @@
   position: relative;
   font-size: 14px;
   line-height: 21px;
-  margin-bottom: 14px;
+  margin-bottom: 9%;
+  // margin-bottom: 14px;
 
   &::before {
     position: absolute;

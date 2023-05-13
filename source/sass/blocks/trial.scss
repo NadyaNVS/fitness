@@ -58,12 +58,12 @@
 
     &:hover {
       opacity: 0.8;
-      border-bottom-color:$color-cornflower-blue;
+      border-bottom-color: $color-cornflower-blue;
     }
 
     &:active {
       background-color: transparent;
-      border-bottom-color:$color-cornflower-blue;
+      border-bottom-color: $color-cornflower-blue;
     }
 
     &:focus-visible {
