@@ -1,4 +1,3 @@
-// import Swiper from '../../../node_modules/swiper/swiper-bundle';
 import Swiper from 'swiper/swiper-bundle';
 const trainersSwiper = document.querySelector('.trainers__swiper');
 const reviewsSwiper = document.querySelector('.reviews__swiper');
@@ -21,18 +20,15 @@ const initTrainersSwiper = () => {
           320: {
             slidesPerView: 1,
             spaceBetween: 20,
-            // slidesPerGroup: 1,
           },
 
           768: {
             slidesPerView: 2,
-            // slidesPerGroup: 2,
             spaceBetween: 30,
           },
 
           1200: {
             slidesPerView: 4,
-            // slidesPerGroup: 4,
             spaceBetween: 40,
           },
         },

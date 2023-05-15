@@ -41,6 +41,7 @@
     width: 500px;
     height: 556px;
     background-image: url("../img/header-man.jpg");
+    background-color: $color-sapphire;
     background-repeat: no-repeat;
     background-size: cover;
     left: 460px;
@@ -69,29 +70,6 @@
     }
   }
 }
-
-// .promo {
-//   position: relative;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 500px;
-//     height: 556px;
-//     background-image: url("../img/header-man.jpg");
-//     background-repeat: no-repeat;
-//     left: 563px;
-//     top: -23px;
-
-//     @include vp-1199 {
-//       width: 324px;
-//       height: 390px;
-//       background-size: cover;
-//       left: 399px;
-//       top: 23px;
-//     }
-//   }
-// }
 
 .promo h1 {
   margin: 0;
