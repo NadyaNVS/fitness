@@ -33,7 +33,7 @@
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 43px;
+    margin-bottom: 41px;
   }
 }
 
@@ -124,8 +124,8 @@
     height: 100%;
 
     @include retina {
-      background-image: url("../img/content/promotion@2x.jpg");
-      background-image: url("../img/content/promotion@2x.webp");
+      background-image: url("../img/content/promotion@2x.jpg"), linear-gradient(#3F66D8, #9CC5F0);
+      background-image: url("../img/content/promotion@2x.webp"), linear-gradient(#3F66D8, #9CC5F0);
     }
 
     @include vp-1199 {

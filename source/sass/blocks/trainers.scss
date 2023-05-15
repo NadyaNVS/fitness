@@ -105,7 +105,6 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  // padding: 51px 47px 58px 48px;
   padding: 20% 12% 14% 14%;
   color: $color-default-white;
   background-color: $trainers-bg;
@@ -116,12 +115,12 @@
   opacity: 0;
 
   @include vp-1199 {
-    padding: 72px 47px 58px 39px;
+    padding: 52px 47px 58px 39px;
     justify-content: center;
   }
 
   @include vp-767 {
-    padding: 61px 30px 47px 29px;
+    padding: 41px 30px 47px 29px;
   }
 }
 

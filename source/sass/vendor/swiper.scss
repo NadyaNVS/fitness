@@ -294,18 +294,9 @@
   left: 40px;
   right: auto;
 
-  // @media (max-width: 1199px) {
-  //   left: 45px;
-  // }
-
   @media (max-width: 767px) {
-    left: 14px;
+    left: 9px;
   }
-
-
-  // @include vp-1199 {
-  //   left: 45px;
-  // }
 }
 
 .swiper-button-prev:after,
@@ -318,17 +309,9 @@
   right: 39px;
   left: auto;
 
-  // @media (max-width: 1199px) {
-  //   right: 41px;
-  // }
-
   @media (max-width: 767px) {
-    right: 12px;
+    right: 9px;
   }
-
-  // @include vp-1199 {
-  //   right: 41px;
-  // }
 }
 
 .swiper-button-next:after,
