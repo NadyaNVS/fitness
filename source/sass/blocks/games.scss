@@ -31,7 +31,8 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/games-man.jpg");
+    background-image: url("../img/content/games-man.jpg");
+    background-image: url("../img/content/games-man.webp");
     background-color: $color-midnight-express;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -43,7 +44,8 @@
 
 
     @include retina {
-      background-image: url("../img/games-man@2x.jpg");
+      background-image: url("../img/content/games-man@2x.jpg");
+      background-image: url("../img/content/games-man@2x.webp");
     }
 
 

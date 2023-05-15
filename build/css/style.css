@@ -2118,7 +2118,8 @@ button,
 .games__content::before {
   content: "";
   position: absolute;
-  background-image: url("../img/games-man.jpg");
+  background-image: url("../img/content/games-man.jpg");
+  background-image: url("../img/content/games-man.webp");
   background-color: #030744;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -2609,7 +2610,8 @@ button,
 .offers__item--unlimited::before {
   content: "";
   position: absolute;
-  background-image: url("../img/promotion.jpg");
+  background-image: url("../img/content/promotion.jpg");
+  background-image: url("../img/content/promotion.webp");
   background-color: #5189e5;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -4843,10 +4845,12 @@ button,
   }
 
   .games__content::before {
-    background-image: url("../img/games-man@2x.jpg");
+    background-image: url("../img/content/games-man@2x.jpg");
+    background-image: url("../img/content/games-man@2x.webp");
   }
 
   .offers__item--unlimited::before {
-    background-image: url("../img/promotion@2x.jpg");
+    background-image: url("../img/content/promotion@2x.jpg");
+    background-image: url("../img/content/promotion@2x.webp");
   }
 }

@@ -112,7 +112,8 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/promotion.jpg");
+    background-image: url("../img/content/promotion.jpg");
+    background-image: url("../img/content/promotion.webp");
     background-color: $color-cornflower-blue;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -123,7 +124,8 @@
     height: 100%;
 
     @include retina {
-      background-image: url("../img/promotion@2x.jpg");
+      background-image: url("../img/content/promotion@2x.jpg");
+      background-image: url("../img/content/promotion@2x.webp");
     }
 
     @include vp-1199 {
