@@ -1656,7 +1656,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 396px;
+  width: 34%;
   padding-top: 88px;
 }
 
@@ -3755,7 +3755,7 @@ button,
   }
 
   .promo__wrapper {
-    max-width: 50%;
+    width: 50%;
     padding-top: 68px;
     margin-left: -15px;
   }

@@ -20,11 +20,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 396px;
+  width: 34%;
   padding-top: 88px;
 
   @include vp-1199 {
-    max-width: 50%;
+    width: 50%;
     padding-top: 68px;
     margin-left: -15px;
   }
