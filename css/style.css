@@ -4878,11 +4878,7 @@ button,
   }
 
   .offers__item--unlimited::before {
-    background-image: url("../img/content/promotion@2x.jpg"), -webkit-gradient(linear, left top, left bottom, from(#3F66D8), to(#9CC5F0));
-    background-image: url("../img/content/promotion@2x.jpg"), -o-linear-gradient(#3F66D8, #9CC5F0);
-    background-image: url("../img/content/promotion@2x.jpg"), linear-gradient(#3F66D8, #9CC5F0);
-    background-image: url("../img/content/promotion@2x.webp"), -webkit-gradient(linear, left top, left bottom, from(#3F66D8), to(#9CC5F0));
-    background-image: url("../img/content/promotion@2x.webp"), -o-linear-gradient(#3F66D8, #9CC5F0);
-    background-image: url("../img/content/promotion@2x.webp"), linear-gradient(#3F66D8, #9CC5F0);
+    background-image: url("../img/content/promotion@2x.jpg");
+    background-image: url("../img/content/promotion@2x.webp");
   }
 }
