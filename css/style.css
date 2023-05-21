@@ -1863,7 +1863,7 @@ button,
 .packeges::before {
   content: "";
   position: absolute;
-  background-image: url("../../img/weights.png");
+  background-image: url("../img/weights.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 320px;
@@ -2008,7 +2008,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 54px 70px 61px;
+  padding: 54px 59px 61px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   border: 7px solid transparent;
 }
 
@@ -2048,8 +2050,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2093,7 +2093,7 @@ button,
   border: 2px solid #102654;
   padding-top: 25px;
   padding-bottom: 25px;
-  width: 100%;
+  width: 92%;
 }
 
 .games__container {
@@ -2400,7 +2400,6 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 0.7fr 1fr;
   grid-template-columns: 1fr 0.7fr 1fr;
-  grid-auto-rows: 1fr;
   gap: 151px 61px;
 }
 
@@ -2553,7 +2552,6 @@ button,
   gap: 40px;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
 }
 
 .offers__item {
@@ -2583,6 +2581,7 @@ button,
 
 .offers__item p {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .offers__button {
@@ -2639,12 +2638,12 @@ button,
 .offers__item--unlimited p {
   font-size: 18px;
   line-height: 25px;
+  margin-bottom: 15px;
 }
 
 .offers__item--unlimited .offers__button {
   font-size: 14px;
   line-height: 16px;
-  margin-top: 189px;
   margin-bottom: 0;
   color: #ffffff;
   border: none;
@@ -2660,6 +2659,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   width: 41%;
+  height: 100%;
 }
 
 .reviews__container {
@@ -2695,12 +2695,15 @@ button,
 }
 
 .reviews__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -2965,9 +2968,10 @@ button,
 }
 
 .footer__navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
   gap: 80px;
   -webkit-box-align: center;
   -ms-flex-align: center;
