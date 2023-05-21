@@ -125,7 +125,8 @@
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  padding: 54px 70px 61px;
+  padding: 54px 59px 61px;
+  box-sizing: border-box;
   border: 7px solid transparent;
 
   @include vp-1199 {
@@ -178,7 +179,6 @@
 
 .tabs__price {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 14px;
   z-index: 0;
@@ -239,5 +239,5 @@
   border: 2px solid $color-sapphire;
   padding-top: 25px;
   padding-bottom: 25px;
-  width: 100%;
+  width: 92%;
 }

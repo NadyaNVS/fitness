@@ -38,7 +38,8 @@
 }
 
 .footer__navigation {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 80px;
   align-items: center;
   width: 795px;

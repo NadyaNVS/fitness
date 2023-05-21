@@ -43,6 +43,7 @@ const initReviewsSwiper = () => {
       new Swiper('.reviews__swiper', {
         direction: 'horizontal',
         loop: false,
+        autoHeight: true,
         slidesPerView: 1,
         initialSlide: 0,
         spaceBetween: 33,

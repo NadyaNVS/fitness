@@ -44,7 +44,6 @@
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
 
   @include vp-1199 {
     gap: 30px;
@@ -77,6 +76,7 @@
 
   p {
     margin: 0;
+    margin-bottom: 10px;
   }
 
   @include vp-767 {
@@ -158,12 +158,13 @@
   p {
     font-size: 18px;
     line-height: 25px;
+    margin-bottom: 15px;
   }
 
   .offers__button {
     font-size: 14px;
     line-height: 16px;
-    margin-top: 189px;
+    // margin-top: 189px;
     margin-bottom: 0;
     color: $color-default-white;
     border: none;
@@ -197,6 +198,7 @@
   display: flex;
   flex-direction: column;
   width: 41%;
+  height: 100%;
 
   @include vp-1199 {
     width: 36%;
