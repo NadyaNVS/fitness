@@ -2581,7 +2581,7 @@ button,
 
 .offers__item p {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .offers__button {
@@ -3036,7 +3036,7 @@ button,
   grid-template-columns: repeat(3, auto);
   row-gap: 6px;
   margin-top: -6px;
-  margin-right: 2px;
+  margin-right: -3px;
   min-width: 100px;
 }
 
