@@ -4235,9 +4235,9 @@ button,
 @media (max-width: 767px) {
   .swiper-button-prev,
   .swiper-button-next {
-    -webkit-transform: translateY(-32%);
-    -ms-transform: translateY(-32%);
-    transform: translateY(-32%);
+    -webkit-transform: translateY(12%);
+    -ms-transform: translateY(12%);
+    transform: translateY(12%);
   }
 
   .swiper-button-prev:after,
