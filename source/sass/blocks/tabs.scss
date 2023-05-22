@@ -240,4 +240,8 @@
   padding-top: 25px;
   padding-bottom: 25px;
   width: 92%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
 }
