@@ -96,6 +96,11 @@
   }
 
   a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: min-content;
+
     @include hover-focus {
       opacity: 0.8;
       color: $color-cornflower-blue;
